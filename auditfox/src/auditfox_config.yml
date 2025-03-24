@@ -1,0 +1,11 @@
+# AuditFox - Open Source Audit Logging Solution
+# Copyright (C) 2025 Danzopen by Daniel Barbosa
+
+
+cluster:
+  nodes: 1
+
+input_mode:
+  https: TRUE
+  agents: FALSE
+  queue: FALSE

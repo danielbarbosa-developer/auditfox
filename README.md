@@ -16,7 +16,10 @@ AuditFox is licensed under the [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.ht
 
 ## ⚖️ Copyright
 
-© 2025 AuditFox. AuditFox is a trademark of its respective owner. This software is provided under the GPL-3.0 license, ensuring freedom to use, modify, and distribute while preserving the project's open-source integrity.
+AuditFox - Open Source Audit Logging Solution
+Copyright (C) 2025 Danzopen by Daniel Barbosa
+
+AuditFox is a trademark of its respective owner. This software is provided under the GPL-3.0 license, ensuring freedom to use, modify, and distribute while preserving the project's open-source integrity.
 
 ## 🤝 Contributing
 

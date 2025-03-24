@@ -1,0 +1,49 @@
+# AuditFox - Open Source Audit Logging Solution
+# Copyright (C) 2025 Danzopen by Daniel Barbosa
+
+name: Build and Tests
+on:
+  push:
+    branches:
+      - feature/*
+      - fix/*
+  pull_request:
+    branches:
+      - feature/*
+      - fix/*
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: 1.22.5
+
+    - name: Verify dependencies
+      run: go mod verify
+
+    - name: Build
+      run: go build -v ./...
+
+    - name: Run go vet
+      run: go vet ./...
+
+    - name: Install staticcheck
+      run: go install honnef.co/go/tools/cmd/staticcheck@latest
+
+    - name: Run staticcheck
+      run: staticcheck ./...
+
+    - name: Install golint
+      run: go install golang.org/x/lint/golint@latest
+
+    - name: Run golint
+      run: golint ./...
+
+    - name: Run tests
+      run: go test -race -vet=off ./...
