@@ -4,13 +4,9 @@
 name: Build and Tests
 on:
   push:
-    branches:
-      - feature/*
-      - fix/*
+    branches: [ "main", "feature/*", "fix/*" ]
   pull_request:
-    branches:
-      - feature/*
-      - fix/*
+    branches: [ "main", "feature/*", "fix/*" ]
 
 jobs:
 
