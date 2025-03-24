@@ -4,18 +4,18 @@
 name: Build and Tests
 on:
   push:
-    branches:
-      - feature/*
-      - fix/*
+    branches: [ "main", "feature/*", "fix/*" ]
   pull_request:
-    branches:
-      - feature/*
-      - fix/*
+    branches: [ "main", "feature/*", "fix/*" ]
 
 jobs:
 
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: auditfox/src
+
     steps:
     - uses: actions/checkout@v4
 
