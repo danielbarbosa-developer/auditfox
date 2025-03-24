@@ -1,0 +1,12 @@
+# AuditFox - Open Source Audit Logging Solution
+# Copyright (C) 2025 Danzopen by Daniel Barbosa
+
+server:
+  host: "localhost"
+  port: 8000
+
+# Database credentials
+database:
+  in_memory: TRUE
+  user: "admin"
+  pass: "super-user-1980"
