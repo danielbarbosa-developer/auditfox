@@ -5,6 +5,10 @@ Copyright (C) 2025 Danzopen by Daniel Barbosa
 
 package main
 
-func main() {
+import (
+	"auditfox/app"
+)
 
+func main() {
+	app.StartUp()
 }
