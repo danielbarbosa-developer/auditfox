@@ -11,12 +11,17 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func setupRouter() *gin.Engine {
-	return gin.Default()
+const auditAddPath = "/auditlog/add"
+
+func SetupRouters() *gin.Engine {
+	router := gin.Default()
+	postAuditLog(router)
+	healthCheck(router)
+	return router
 }
 
 func postAuditLog(router *gin.Engine) *gin.Engine {
-	router.POST("/auditlog/add", func(c *gin.Context) {
+	router.POST(auditAddPath, func(c *gin.Context) {
 		var auditLog models.AuditLogRecord
 		c.BindJSON(&auditLog)
 		c.JSON(200, auditLog)
